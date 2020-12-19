@@ -1,5 +1,4 @@
 
-> @ start /app
 > node index.js
 
 internal/modules/cjs/loader.js:818
