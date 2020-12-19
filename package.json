@@ -96,5 +96,9 @@
   "typings": "./index.d.ts",
   "version": "3.0.1"
 }
-
+{
+    "scripts": {
+        "start": "node index.js"
+    }
+}
 
