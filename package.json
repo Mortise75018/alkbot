@@ -1,34 +1,84 @@
-
-> node index.js
-
-internal/modules/cjs/loader.js:818
-  throw err;
-  ^
-
-Error: Cannot find module 'discord.js'
-Require stack:
-- /app/index.js
-    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
-    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
-    at Module.require (internal/modules/cjs/loader.js:887:19)
-    at require (internal/modules/cjs/helpers.js:74:18)
-    at Object.<anonymous> (/app/index.js:1:17)
-    at Module._compile (internal/modules/cjs/loader.js:999:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
-    at Module.load (internal/modules/cjs/loader.js:863:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [ '/app/index.js' ]
+{
+  "_from": "@discordjs/collection@^0.1.5",
+  "_id": "@discordjs/collection@0.1.5",
+  "_inBundle": false,
+  "_integrity": "sha512-CU1q0UXQUpFNzNB7gufgoisDHP7n+T3tkqTsp3MNUkVJ5+hS3BCvME8uCXAUFlz+6T2FbTCu75A+yQ7HMKqRKw==",
+  "_location": "/@discordjs/collection",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@discordjs/collection@^0.1.5",
+    "name": "@discordjs/collection",
+    "escapedName": "@discordjs%2fcollection",
+    "scope": "@discordjs",
+    "rawSpec": "^0.1.5",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.5"
+  },
+  "_requiredBy": [
+    "/discord.js"
+  ],
+  "_resolved": "https://registry.npmjs.org/@discordjs/collection/-/collection-0.1.5.tgz",
+  "_shasum": "1781c620b4c88d619bd0373a1548e5a6025e3d3a",
+  "_spec": "@discordjs/collection@^0.1.5",
+  "_where": "C:\\Users\\schar\\Desktop\\alkbot\\node_modules\\discord.js",
+  "author": {
+    "name": "Amish Shah",
+    "email": "amishshah.2k@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/discordjs/collection/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Utility data structure used in Discord.js",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/node": "^13.7.4",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "discord.js-docgen": "github:discordjs/docgen#ts-patch",
+    "eslint": "^6.8.0",
+    "eslint-config-marine": "^6.0.0",
+    "jsdoc-babel": "^0.5.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.2"
+  },
+  "eslintConfig": {
+    "extends": "marine/node"
+  },
+  "homepage": "https://github.com/discordjs/collection#readme",
+  "keywords": [
+    "map",
+    "collection",
+    "utility"
+  ],
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "name": "@discordjs/collection",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discordjs/collection.git"
+  },
+  "scripts": {
+    "build": "rimraf dist/ && tsc",
+    "docs": "docgen --jsdoc jsdoc.json --source src/*.ts src/**/*.ts --custom docs/index.yml --output docs/docs.json",
+    "docs:test": "docgen --jsdoc jsdoc.json --source src/*.ts src/**/*.ts --custom docs/index.yml",
+    "lint": "eslint src --ext .ts",
+    "prebuild": "npm run lint",
+    "pretest": "npm run build",
+    "test": "node test/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.1.5"
 }
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ start: `node index.js`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ start script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-npm WARN Local package.json exists, but node_modules missing, did you mean to install?
 
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /app/.npm/_logs/2020-12-19T22_00_00_146Z-debug.log
+{
+    "scripts": {
+        "start": "node index.js"
+    }
+}
